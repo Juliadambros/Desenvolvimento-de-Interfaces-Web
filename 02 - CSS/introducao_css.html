@@ -1,0 +1,42 @@
+<!-- estrutura básica css:
+ SELETOR{
+    propriedade: valor;
+ }
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       /*classe*/
+        .paragrafos{
+            background-color: blueviolet;
+            color: black;
+            font-size: 25pt;
+        }
+         /*CSS INTERNO*/
+        /* color é a cor do texto*/
+        /*p{
+            background-color: blueviolet;
+            color: black;
+            font-size: 25pt;
+        }*/
+        /*id, quando usar tem que colocar o #, só usa em um elemento*/
+        #paragrafo_especial{
+            color: burlywood;
+            /*peso da fonte, "negrito"*/
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!--INLINE CSS-->
+    <!--<p style="color: black; font-size: 35pt;">TEXTO</p>-->
+    <p class="paragrafos">Meu primeiro parágrafo</p>
+    <p>Meu segundo parágrafo</p>
+    <p class="paragrafos">Meu terceiro parágrafo</p>
+    <p id="paragrafo_especial">Meu quarto parágrafo</p>
+</body>
+</html>
