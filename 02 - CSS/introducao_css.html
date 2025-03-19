@@ -8,7 +8,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <!--não se escreve tudo em maiusculo para frases inteiras, pq o leitor de tela vai achar que é uma silga-->
+    <title>Introdução ao CSS</title>
     <style>
        /*classe*/
         .paragrafos{
@@ -29,13 +30,27 @@
             /*peso da fonte, "negrito"*/
             font-weight: bold;
         }
+        /*sempre optar por fontes sans-serif*/
+        #paragrafo_teste{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 28pt;
+            /*style serve para separar italico de não italico*/
+            font-style: italic;
+            font-weight: 700;
+            /*não é para alinhar elementos*/
+            text-align: center; /*end e right, start e left significam o mesmo*/
+            text-decoration: line-through;
+            /*recuo do paragrafo*/
+            /*text-indent: ;*/
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
     <!--INLINE CSS-->
     <!--<p style="color: black; font-size: 35pt;">TEXTO</p>-->
     <p class="paragrafos">Meu primeiro parágrafo</p>
-    <p>Meu segundo parágrafo</p>
+    <p id="paragrafo_teste">Meu segundo parágrafo</p>
     <p class="paragrafos">Meu terceiro parágrafo</p>
     <p id="paragrafo_especial">Meu quarto parágrafo</p>
 </body>
