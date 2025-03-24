@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhando com Largura e Altura</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(194, 183, 204);
+        }
+        p{
+            background-color: lightgrey;
+        }
+        h1{
+            background-color: coral;
+            /*padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            padding-left: 25px;
+            Mesma coisa:*/
+           /* padding: 20px 30px 10px 25px;
+            duas medidas: entendo que T e B são iguais e L e R são iguais*/
+            padding: 100px 200px;
+            outline: 5px dashed black;
+            /*border utiliza o espaço do elemento, o outline usa o espaço fora "da caixa"*/
+        }
+        /*a altura só vai funconar se delimitar a altura no body(e não pode ser em porcentagem)
+        se colocar em porcentagem aqui ele vai fazer de acordo com o tamanho da tela, em px vai fazer de qualquer jeito */
+        h2{
+            background-color: aquamarine;
+            width: 50%;
+            height: 400px;
+            /*border: 1px solid black;*/
+            padding: 50px;
+            margin: 50px;
+            /*espessura da borda*/
+            /*border-width: 5px;
+            border-style: dashed;
+            border-color: wheat;
+            Mesma coisa:
+            border: 5px dashed wheat;*/
+            border-width: 5px;
+            border-style: dashed;
+            border-color: wheat;
+            border-top: 5px solid black;
+        }
+        .destaque{
+            background-color: rgb(165, 123, 103);
+            font-size: 24px;
+        }
+        .tamanho{
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <h2>Largura e Altura</h2>
+    <p class="destaque">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="destaque tamanho">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="tamanho">Lorem ipsum dolor sit amet.</p>
+    
+</body>
+</html>
