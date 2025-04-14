@@ -45,15 +45,13 @@
             flex-basis: 50px;
             background-color: rgb(164, 113, 212);
             margin: 0px;
-            flex-grow: 1;
         }
         .flex-container7 .div3{
             background-color: rgb(138, 51, 94);
-            flex-grow: 2;
+            flex-grow: 1;
         }
         .flex-container7 .div4{
             background-color: rgb(209, 95, 49);
-            flex-grow: 3;
         }
         .flex-container7{
             justify-content: center;
@@ -61,17 +59,33 @@
             gap: 10px;
         }
         .flex-container8 div{
-            flex-basis: 500px;
+            flex-basis: 300px;
             background-color: rgb(177, 216, 114);
         }
         .flex-container8 .div3{
-            flex-shrink: 2;
+            flex-shrink: 15;
+            background-color: rgb(52, 112, 40);
         }
         .flex-container8{
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 10px;
+        }
+        .flex-container9{
+            justify-content: center;
+            align-items: center;
+            gap: 10;
+        }
+        .flex-container9 div{
+            background-color: rgb(100, 100, 163);
+        }
+        .flex-container9 .div2{
+            order: 1;
+            align-self: flex-start;
+        }
+        .flex-container9 .div3{
+            order: -1;
+            align-self: flex-end;
         }
         
     </style>
