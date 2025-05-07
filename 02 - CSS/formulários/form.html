@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulários</title>
+    <style>
+        input{
+            display: block;
+            margin-bottom: 10px;
+        }
+        .comorbidade{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset> 
+            <legend>Introdução</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="filhos">Quantidade de Filhos</label>
+            <input type="number" id="filhos" min="0" max="100">
+            <input type="date" min="2025-01-01" max="2025-05-07">
+            <fieldset class="comorbidade">
+                <legend>Possui comorbidade?</legend>
+                <input type="radio" name="comorbidade" value="sim">Sim 
+                <input type="radio" name="comorbidade" value="não">Não
+            </fieldset>
+            <fieldset class="interesse">
+                <legend>Interesse</legend>
+                <label><input type="checkbox" name="interesse" value="html">HTML</label>
+                <label><input type="checkbox" name="interesse" value="css">CSS</label>
+                <label><input type="checkbox" name="interesse" value="js">JavaScript</label>
+            </fieldset>
+            <fieldset>
+                <legend>Escolha uma linguagem</legend>
+                <select name="linguagem" required>
+                    <option value="">Selecione</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Linguagem</legend>
+                    <select name="linguagem2">
+                        <optgroup label="front">
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="js">JavaScript</option>
+                        </optgroup>
+                        <optgroup label="back">
+                            <option value="laravel">Laravel</option>
+                            <option value="express">Express</option>
+                        </optgroup>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <legend>Linguagem</legend>
+                <input type="text" list="linguagemList">
+                <datalist id="linguagemList">
+                    <option value="html"></option>
+                    <option value="css"></option>
+                    <option value="js"></option>
+                    <option value="laravel"></option>
+                    <option value="express"></option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Envie sua Mensagem</legend>
+                <textarea name="msg" cols="100" rows="10"></textarea>
+            </fieldset>
+            <fieldset>
+                <textarea cols="50" rows="8" readonly>
+                    CONTRATO DE UTILIZAÇÃO
+                        1.1 - Clausula 1
+                        1.2 - Clausula 2
+                </textarea>
+                <input type="checkbox">Li e aceito o contrato.
+            </fieldset>
+            <input type="file">
+            <input type="hidden" value="valor_escondido">
+            <input type="button" value="Botão">
+            <button>Botão</button>
+            <input type="search" placeholder="Busque aqui">
+            <input type="range" min="0" max="10">
+            <input type="time">
+            <input type="color">
+            <input type="submit" value="Entrar" class="btn">
+        </fieldset>
+    </form>
+</body>
+</html>
