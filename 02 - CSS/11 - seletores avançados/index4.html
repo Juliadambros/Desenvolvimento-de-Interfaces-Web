@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seletores Avançados</title>
+    <style>
+       div :first-child{
+        color: rgb(226, 43, 171);
+       }
+       /*primeiro elemento desde que seja paragrafo*/
+       div p:first-child{
+        color: rgb(17, 126, 115);
+       }
+       div :last-child{
+        color: rgb(69, 39, 150);
+       }
+       /*vai pela ordem que colocamos*/
+       div p:nth-child(2){
+        color: rgb(238, 157, 51);
+       }
+       div :nth-child(3){
+        background-color: rgba(185, 121, 121, 0.37);
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Primeiro Paragrafo</p>
+        <p>Segundo Paragrafo</p>
+        <p>Terceiro Paragrafo</p>
+    </div>
+    <div>
+        <a href="#">Primeiro link</a>
+        <a href="#">Segundo link</a>
+        <a href="#">Terceiro link</a>
+    </div>
+    
+</body>
+</html>

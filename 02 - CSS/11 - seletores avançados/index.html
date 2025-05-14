@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seletores Avançados</title>
+    <style>
+        /* não é recomendado 
+        article{
+            background-color: beige;
+        }
+        article p{
+            color: brown;
+        }
+        article p a {
+            color: yellow;
+        }
+        article p a b{
+            color: blueviolet;
+        }
+        */
+        article p{
+            background-color: beige;
+        }
+        /*colocando o css direto no filho direto dele , ">" :  "filho direto de" */
+        article p > a{
+            background-color: rgb(158, 113, 201);
+        }
+        /*
+        article p > b{
+            background-color: rgb(105, 218, 218);
+        } não funciona pq o b não é filho direto de p*/
+    </style>
+</head>
+<body>
+    <article>Título de Nível 3
+    <p>paragrafo <a href="#">com ancora<b> negrito</b></a></p>
+    <p>paragrafo <a href="#">com ancora<b> negrito</b></a></p>
+    <p>paragrafo <a href="#">com ancora<b> negrito</b></a></p>
+    </article>
+    
+</body>
+</html>

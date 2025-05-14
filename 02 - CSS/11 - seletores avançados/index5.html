@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seletores Avançados</title>
+    <style>
+       p{
+        text-align: center;
+       }
+       /*fazer conteudo não selecionavel, e para o google não achar tbm*/
+       p::before{
+        content: "<<<";
+       }
+       p::after{
+        content: ">>>";
+       }
+       div::before{
+        content: "";
+        width: 1em;
+        height: 1em;
+        background-color: rgb(187, 43, 180);
+        display: block;
+       }
+       div::after{
+        content: url(https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small/user-icon-on-transparent-background-free-png.png);
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <p>paragrafo com um texto simples</p>
+    </div>
+</body>
+</html>

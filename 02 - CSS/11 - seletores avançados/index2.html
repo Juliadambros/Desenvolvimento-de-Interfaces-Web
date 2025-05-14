@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seletores Avançados</title>
+    <style>
+        /*todos os "a" em que o href começam em http 
+        a ordem importa, se o o css do http for depois do .com ele vai sobreescrever*/
+       a[href^="http"]{
+        color: rgb(226, 43, 119);
+       }
+       a[title]{
+        color: rgb(54, 54, 201);
+       }
+       /*esse é igual o ^ mas do final*/
+       a[href$=".com"]{
+        color: rgb(105, 190, 98);
+       }
+    </style>
+</head>
+<body>
+    <article>Título de Nível 3
+        <a>sem title</a>
+        <a title="">com <title></title></a>
+        <a href="index.html">link externo</a>
+        <a href="http://www.unicentro.br">link externo</a>
+        <a href="http://http://www.google.com">Google</a>
+    </article>
+    
+</body>
+</html>

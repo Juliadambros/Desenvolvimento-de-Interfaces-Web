@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seletores Avançados</title>
+    <style>
+       a[href="#"]{
+        color: rgb(85, 3, 3);
+        opacity: .3;
+       }
+       a[href="#"]:not(.link-on){
+        color: rgb(7, 30, 65);
+        opacity: .5;
+       }
+       a[href^="http"]{
+        color: rgb(15, 77, 20);
+       }
+       a[href$=".pdf"]{
+        color: rgb(136, 39, 3);
+       }
+       a[target="_blank"]{
+        text-decoration: none;
+       }
+       a[alt="externo"]{
+        text-decoration: none;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#" class="link-on">link falso</a></li>
+        <li><a href="http>//www.unicentro.br" target="_blank">link externo</a></li>
+        <li><a href="pasta/arquivo.pdf">link para arquivo pdf</a></li>
+        <li><a href="index.html">link interno</a></li>
+    </ul>
+    
+</body>
+</html>

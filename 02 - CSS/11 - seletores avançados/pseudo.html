@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>PSEUDO CLASSES</title>
+    <style>
+        button{
+            background-color: #7a7979;
+            color: #FFF;
+            border: none;
+            padding: 1em;
+            margin-bottom: .5em;
+        }
+        button:disabled{
+            opacity: .5;
+        }
+        /*empty é um estado que o elemnto está, nesse caso vazio*/
+        p:empty::before{
+            content: 'paragrafo';
+        }
+        /*navegação por tab, serve para outras coisas mas nesse caso*/
+        a:focus{
+        background-color:rgb(72, 179, 50)
+        }
+        a:hover{
+        background-color:rgb(124, 140, 214)
+        }
+        input[type="text"]:read-write{
+            background-color: #e78686;
+            border: none;
+            padding: .5em;
+        }
+        /*se eu colocar no disabled não vai pegar no read-only*/
+        input[type="text"]:read-only{
+            background-color: #b3f097;
+            border: none;
+            padding: .5em;
+        }
+        /*aqui so a palavra*/
+        input[type="text"]::placeholder{
+            color: #2a6388;
+            border: none;
+            padding: .5em;
+        }
+        /*aqui pega inteiro*/
+        input[type="text"]:placeholder-shown{
+            background-color:  #b38dc5;
+            border: none;
+            padding: .5em;
+        }
+
+    </style>
+</head>
+<body>
+    <button>Vai</button>
+    </br>
+    <button disabled>Vai disabled</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, rerum?</p>
+    <p> </p>
+    <p>teste</p>
+    <p></p>
+    <p>teste</p>
+    
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+    </ul>
+
+    <form action="#">
+        <input type="text" value="valor_inicial"></br></br>
+        <input type="text" value="valor" disabled></br></br>
+        <input type="text" value="valor" readonly></br></br>
+        <input type="text" placeholder="placeholder"></br></br>
+        <input type="text"></br></br>
+    </form>
+    
+</body>
+</html>
