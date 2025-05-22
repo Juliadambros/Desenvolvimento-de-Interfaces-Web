@@ -30,7 +30,6 @@ body {
   border-radius: 20px;
 }
 
-/* Parte superior do card de perfil */
 .card-perfil .user-section {
   background-color: #5746ea;
   padding: 2rem 1.5rem;
@@ -42,7 +41,6 @@ body {
   border-radius: 20px;
 }
 
-/* Imagem de perfil */
 .card-perfil .profile-pic img {
   width: 70px;
   height: 70px;
@@ -52,7 +50,6 @@ body {
   background-color: white;
 }
 
-/* Texto dentro do perfil */
 .card-perfil .report-for {
   color: #bbc0ff;
   font-size: 0.9rem;
@@ -65,7 +62,6 @@ body {
   margin-top: 5px;
 }
 
-/* Menu */
 .card-perfil .menu {
   display: flex;
   flex-direction: column;
@@ -79,13 +75,12 @@ body {
   color: white;
 }
 
-/* Cartões de atividades */
 .cards-atividades {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center; /* <- alinhamento mais garantido */
-  width: 720px; /* 3 cards de 220px + 2 espaços de 1.5rem (24px) */
+  justify-content: center; 
+  width: 720px; 
   height: 450px;
 }
 
