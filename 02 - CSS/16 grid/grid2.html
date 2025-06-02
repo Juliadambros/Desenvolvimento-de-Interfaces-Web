@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        .gridContainer {
+            width: 100%;
+            background: #ccc;
+            display: grid;
+            /*fr: preenche oq sobra
+            grid-template-columns: 150px 100px 1fr;
+            mas como medidas diferentes não fica bom:
+            grid-template-columns: 1fr 2fr 1fr;
+            */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 10px;
+        }
+
+        .gridItem {
+            background: #999;
+            font-size: 2em;
+            font-family: sans-serif;
+            padding: 5px 15px;
+        }
+
+        .gridItem:nth-child(even) {
+            background: #999;
+            color: white;
+        }
+
+        .gridItem:nth-child(odd) {
+            background: #eee;
+        }
+
+        .gridItem:nth-child(1){
+            background-color: rgb(238, 238, 32);
+            /*
+            grid-row-start: 1;
+            grid-row-end: 2;
+            mesma coisa:*/
+            grid-row: 1 / 2;
+            /*
+            grid-column-start: 1;
+            grid-column-end: 3;
+            mesma coisa:*/
+            grid-column: 1 / 3; /*e tbm é a mesma coisa que 1 / -2 */
+        }
+        .gridItem:nth-child(2){
+            background-color: rgb(223, 159, 86);
+            /*expandiu 3 vezes*/
+            grid-column: 1 / span 3;
+        }
+        .gridItem:nth-child(4){
+            background-color: rgb(101, 134, 204);
+            /*grid-row-start: 2;
+            grid-column-start: 3;
+            grid-row-start: 4;
+            grid-column-end: 4;
+            mesma coisa:*/
+            grid-area: 2 / 3 / 4 / 4;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Grid Layout</h2>
+
+
+    <div class="gridContainer">
+        <div class="gridItem">1</div>
+        <div class="gridItem">2</div>
+        <div class="gridItem">3</div>
+        <div class="gridItem">4</div>
+        <div class="gridItem">5</div>
+        <div class="gridItem">6</div>
+    </div>
+</body>
+
+</html>

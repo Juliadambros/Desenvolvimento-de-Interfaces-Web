@@ -108,29 +108,31 @@ h4 {
 @media screen and (min-width: 56.25em) {
 	.heroBanner {
 		background-image: url(../images/bg_topo_1198x670.jpg);
+		background-size: cover;
         aspect-ratio: 1198/670;
         display: flex;
         justify-content: center;
         align-items: flex-end;
 	}
-	.heroBanner .maxWidht{
+	.heroBanner .maxWidth{
         margin: initial;
         margin-bottom: 4em;
         width: 75%;
     }
 }
-/*
-@media screen  and (min-width:74em){
-     .heroBanner{
-        background-image: linear-gradient(tranparent, var(--primary-color), url(../images/bg_topo_1600x1374.jpg));
-        background-blend-mode: soft-light;
-        background-position: center top;
-        background-color: var(--primary-color);
-        background-repeat: no-repeat;
-        max-width: 80vh;
-        width: 100%;
-    }
-    .heroBanner .maxWidht{
+
+@media screen and (min-width:74em){
+    .heroBanner {
+    background-image: linear-gradient(to bottom, transparent, var(--primary-color)), url(../images/bg_topo_1600x1374.jpg);
+	background-size: cover;
+    background-blend-mode: soft-light;
+    background-position: center top;
+    background-color: var(--primary-color);
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    width: 100%;
+	}
+    .heroBanner .maxWidth{
         width: 50%;
     }
     .heroBanner_iconPlay{
@@ -139,7 +141,7 @@ h4 {
     }
     
 }
-*/
+
 /*CSS da MAIN - MIDDLE CONTENT*/
 .middleContent{
     background-color: #f6f6f6;
@@ -161,4 +163,79 @@ h4 {
 }
 .middleContent p{
     line-height: 1.5;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	gap:var(--default-gap);
+}
+.col{
+	flex: 1 0 auto;
+	width: 100%;
+}
+.col-sm-12{
+	width: 100%;
+}
+
+/*css do main content*/
+@media screen and (min-width: 48.75em){
+	.col-md-6{
+		width: calc(50% - var(--default-gap));
+	}
+}
+@media screen and (min-width: 74em){
+	.col-xl-3{
+		width: calc(25% - var(--default-gap));
+	}
+	.col-xl-6{
+		width: calc(50% - var(--default-gap));
+	}
+}
+.mainContent{
+	padding: 2em;
+}
+.mainContent p{
+	line-height: 1.2;
+}
+.mainContent_img img{
+	width: 100%;
+}
+.mainContent_title{
+	text-transform: uppercase;
+	color: var(--primary-color);
+	font-weight: normal;
+	letter-spacing: .2em;
+	font-size: 1.25em;
+}
+.mainContent .row{
+	row-gap: 4em;
+}
+.mainContent_article{
+	container: main-content / inline-size;
+}
+
+@container main-content (min-width: 500px){
+	.mainContent_container{
+		display: flex;
+		gap: var(--default-gap);
+	}
+	.mainContent_title{
+		margin-top: 0;
+	}
+	.mainContent_img img{
+		max-width: 382px;
+	}
+	.mainContent_img{
+		flex: 0 0 25%;
+	}
+	.mainContent_text{
+		flex-grow: 1;
+	}
+}
+.footer{
+	background-color: #2530303e;
+	color: #83969f;
+	text-align: center;
+	padding: 2em;
 }
