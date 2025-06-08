@@ -16,7 +16,7 @@ body {
     background-position: center;
 }
 
-.grade {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -125,7 +125,7 @@ ul {
 }
 
 @media (max-width: 600px) {
-    .grade {
+    .grid {
         grid-template-columns: 1fr;
         grid-template-areas:
             "cabecalho"
