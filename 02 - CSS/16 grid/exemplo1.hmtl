@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0099)https://moodle.unicentro.br/pluginfile.php/1207110/mod_resource/content/0/grid1_inicio.html?embed=1 -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid</title>
@@ -10,6 +11,12 @@
         .gridContainer {
             width: 300px;
             background: #ccc;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            /*row-gap: 10px;
+            column-gap: 20px;*/
+            gap: 10px 20px;
         }
 
         .gridItem {
@@ -42,6 +49,6 @@
         <div class="gridItem">5</div>
         <div class="gridItem">6</div>
     </div>
+</body>
 
-
-</body></html>
+</html>
