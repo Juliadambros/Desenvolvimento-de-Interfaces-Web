@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <script>
+        let nota1 = Number(prompt("Qual é a primeiro nota?"))
+        let nota2 = Number(prompt("Qual é a segunda nota?"))
+        let media = (nota1 + nota2)/2
+         //alert("Aprovado? "+ (media>7))
+        if(isNaN(nota1) || isNaN(nota2)){
+            alert('Digite apenas números')
+        }
+        else if(nota1 >= 0 && nota1< 10 && nota2 >= 0 && nota2< 10){
+           if(media > 7)
+                alert('Aprovado')
+            else if(media>=5 && media<7)
+                alert('Recuperação')
+            else
+                alert('Reprovado')
+        }
+        else{
+            alert('Digite números entre 0 e 10')
+        }
+    
+        
+    </script>
+</head>
+<body>
+    <h1>Operadores</h1>
+</body>
+</html>
