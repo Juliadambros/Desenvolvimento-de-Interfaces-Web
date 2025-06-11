@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays e Objetos</title>
+    <script>
+        let nome1 = "João";
+        let nome2 = "Pedro";
+        let nome3 = "Maria";
+        /*
+        document.write(nome1 + "</br />");
+        document.write(nome2 + "</br />");
+        document.write(nome3 + "</br />");*/
+        let nomesLiteral = ["João", "Maria", "Pedro"];
+        let nomesContrutor = new Array("João", "Maria", "Pedro");
+        console.log(nomesLiteral)
+        console.log(nomesContrutor)
+        nomesLiteral.push("Marcos")
+        nomesContrutor.push("Marcos")
+        console.log(nomesLiteral)
+        console.log(nomesContrutor)
+        for(let i=0; i<nomesLiteral.length;i++){
+            document.write("nome: "+nomesLiteral[i] + "<br />")
+        }
+    </script>
+</head>
+<body>
+    <h1>Array</h1>
+</body>
+</html>
