@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM -Interfaces WEB</title>
+</head>
+<body>
+    <h1 id="title1">DOM - Interfaces WEB</h1>
+    <form action="#">
+        <input type="text" id="txtNome" placeholder="Nome"><br/>
+        <input type="email" id="txtEmail" placeholder="Email"><br/>
+        <textarea id="" cols="30" rows="10" readOnly>
+        texto do contrato...
+        </textarea><br/>
+        <input type="checkbox" id="contrato" onChange="enableButton()">
+        <label for="contrato">Li e aceito contrato</label><br/>
+        <input type="submit" value="enviar">
+
+    </form>
+    <script>
+        const txtNome = document.querySelector("#txtNome")
+        const txtEmail = document.querySelector("#txtEmail")
+        const labelContrato = document.querySelector("label[for='contrato']")
+        const btn = document.querySelector('form input[type="submit"]')
+        btn.disabled = true
+        function enableButton(){
+            const contrato = document.querySelector("#contrato")
+            let checked = contrato.checked
+            btn.disabled = !checked
+            /*
+            if(checked){
+                btn.disabled = false
+            }else{
+                btn.disabled = true
+            }*/
+        }
+        /*
+        txtNome.value = "Júlia"
+        txtNome.disabled = true
+        txtEmail.value = "julia123@email.com"
+        txtEmail.readOnly = true
+        
+        console.log(labelContrato.htmlFor)*/
+    </script>
+</body>
+</html>
