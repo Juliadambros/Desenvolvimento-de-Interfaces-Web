@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seriesly - Assine Agora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Seriesly</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="entrar.html">Entrar</a></li>
+                <li><a href="assine.html">Assine Agora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="planos">
+        <h2>Escolha seu Plano</h2>
+        <div class="plano-grid">
+            <div class="plano">
+                <h3>Plano Mensal</h3>
+                <p><strong>R$ 29,90 / mês</strong></p>
+                <ul>
+                    <li>Acesso ilimitado a todas as séries</li>
+                    <li>Assista em até 2 dispositivos</li>
+                    <li>Cancelamento a qualquer momento</li>
+                </ul>
+                <button onclick="mostrarFormulario('Plano Mensal')">Assinar Mensal</button>
+            </div>
+            <div class="plano destaque">
+                <h3>Plano Anual</h3>
+                <p><strong>R$ 299,90 / ano</strong></p>
+                <ul>
+                    <li>Todas as vantagens do Plano Mensal</li>
+                    <li>Desconto equivalente a 2 meses grátis</li>
+                    <li>Prioridade em novos lançamentos</li>
+                </ul>
+                <button onclick="mostrarFormulario('Plano Anual')">Assinar Anual</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulario-plano" class="formulario" style="display: none;">
+        <h2>Complete sua Assinatura</h2>
+        <form id="subscribe-form">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <input type="text" id="plano-escolhido" name="plano" readonly>
+            <button type="submit">Finalizar Assinatura</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Seriesly - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
