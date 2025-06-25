@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container2{
+            background-color: #ccc;
+        }
+        .container2 p{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Teste DOM</h1>
+    <div class="container2">
+        <p>paragrafo 1</p>
+        <p>paragrafo 2</p>
+        <p>paragrafo 3</p>
+        <p>paragrafo 4</p>
+    </div>
+    <div class="container">
+        <p>Teste 1</p>
+        <p>Lorem <a href="#">link</a>.</p>
+        <p>Teste 2</p>
+        <h2>Lista</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>
+                Item 2
+                <ul>
+                    <li>Item 2.a</li>
+                    <li>Item 2.b</li>
+                    <li>Item 2.c</li>
+                </ul>
+            </li>
+            <li>Item <a href="#">link</a></li>
+        </ul>
+    </div>
+    <script>
+        const title = document.createElement("h1")
+        const atribute = document.createAttribute("id")
+        atribute.value = "title1"
+        title.setAttributeNode(atribute)
+        //console.log(title)
+
+        const text = document.createTextNode("criar nós no DOM")
+        title.appendChild(text)
+        title.setAttribute('title', 'title inserido')
+        title.setAttribute('style', 'color: red')
+        console.log(title)
+        //document.body.appendChild(title)
+
+        //document.querySelector(".container").appendChild(title)
+
+        //document.querySelector(".container").append(title) //não muda nada, ultimo filho
+        //document.querySelector(".container").prepend(title)//primeiro filho
+
+        //document.querySelector(".container").append(title, "texto novo1")
+        //document.querySelector(".container").prepend(title, "texto novo2")
+        
+        //const container2 = document.querySelector(".container2")
+        //container2.insertAdjacentHTML("beforebegin", "<b>beforebegin</b>") //adjacentHTML pode der qualquer coisa, se for text só poderia texto
+        //container2.insertAdjacentHTML("afterbegin", "<b>afterbegin</b>")
+        //container2.insertAdjacentHTML("beforeend", "<b>beforeend</b>")
+       // container2.insertAdjacentHTML("afterend", "<b>afterend</b>")
+
+        const em = document.createElement("em")
+        em.textContent = "texto especial"
+        container2.insertAdjacentElement("beforebegin", em)
+        //mesma coisa: container2.insertAdjacentHTML("beforebegin", <em>texto expecial</em>)
+        container2.insertAdjacentText("afterend", "texto inserido com adjacent")
+
+        const list = document.querySelector("ul")
+        list.remove()
+    </script>
+</body>
+</html>

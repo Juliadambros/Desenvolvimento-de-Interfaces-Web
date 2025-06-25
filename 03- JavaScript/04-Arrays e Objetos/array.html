@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p> 
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, a!</p>
+   <!--getElements é de html collection e query Selector é nodelist-->
+   <script>
+    let paragrafos = document.querySelectorAll('p')
+    console.log(paragrafos)
+    paragrafos.map(function(p,i){
+        p.textContent = `${i++} - ${p.textContent}`
+    })
+   </script>  
+</body>
+</html>
