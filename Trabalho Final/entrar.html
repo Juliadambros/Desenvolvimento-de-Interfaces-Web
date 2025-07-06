@@ -4,33 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seriesly - Entrar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <header>
         <div class="logo">Seriesly</div>
-        <nav>
-            <ul>
+       <nav>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="menu-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="entrar.html">Entrar</a></li>
                 <li><a href="assine.html">Assine Agora</a></li>
+                <li><button id="toggleTheme"><i class="fas fa-moon"></i></button></li>
             </ul>
         </nav>
     </header>
 
-    <section class="formulario">
-        <h2>Faça seu Login</h2>
-        <form id="login-form">
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <input type="password" name="senha" placeholder="Sua Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
+    <section class="login-container">
+        <div class="login-card">
+            <div class="logo-grande">Seriesly</div>
+            <h2>Entrar</h2>
+            <form id="login-form">
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p class="texto-menor">Novo por aqui? <a href="assine.html">Assine agora</a></p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Seriesly - Todos os direitos reservados.</p>
     </footer>
+
+     <script src="script.js"></script>
 
 </body>
 </html>

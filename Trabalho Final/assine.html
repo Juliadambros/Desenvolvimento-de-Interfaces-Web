@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seriesly - Assine Agora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -11,10 +12,12 @@
     <header>
         <div class="logo">Seriesly</div>
         <nav>
-            <ul>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="menu-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="entrar.html">Entrar</a></li>
                 <li><a href="assine.html">Assine Agora</a></li>
+                <li><button id="toggleTheme"><i class="fas fa-moon"></i></button></li>
             </ul>
         </nav>
     </header>
@@ -50,6 +53,7 @@
         <form id="subscribe-form">
             <input type="text" name="nome" placeholder="Seu Nome" required>
             <input type="email" name="email" placeholder="Seu E-mail" required>
+            <input type="password" name="senha" placeholder="Sua Senha" required>
             <input type="text" id="plano-escolhido" name="plano" readonly>
             <button type="submit">Finalizar Assinatura</button>
         </form>
